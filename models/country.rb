@@ -9,3 +9,28 @@ class Country
       @arrival_date = options["arrival_date"]
       @duration = options["duration"].to_i
 end
+
+
+
+    def save()
+      sql = "INSERT INTO countries
+      (name, arrival_date, duration)
+      VALUES
+      ($1, $2, $3)
+      RETURNING id"
+      values = [@name, @arrival_date, @duration]
+      city = SqlRunner.run(sql, values)
+      @id = city.first()["id"].to_i
+    end
+
+    def self.delete_all()
+      sql = "DELETE FROM countries;"
+      SqlRunner.run(sql)
+    end
+
+    def self.all()
+      sql = "SELECT * FROM countries"
+      countries_array = SqlRunner.run( sql )
+      result = countries_array.map { |countries_hash| Country.new( countries_hash ) }
+      return result
+    end
