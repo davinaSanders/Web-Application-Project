@@ -1,20 +1,32 @@
 <p>Future Destinations</p>
-<% for student in @students %>
-<div class="students">
-  <p>Name: <%= student.first_name() %> <%= student.last_name() %></p>
-  <p>Age: <%= student.age() %> </p>
-  <p><a href="/hogwarts/<%= student.id %>">Show Student</a></p>
+<% for country in @countries
+if country.visited() == "no" %>
+<div class="countries">
+  <p>Name: <%= country.name() %> </p>
+  <p>Date: <%= country.date() %> </p>
+  <p>Duration: <%= country.duration() %> </p>
+  <p>
+    <a href="/hogwarts/<%= student.id %>">Details</a>
+    <a href="/hogwarts/<%= student.id %>">Edit</a>
+    <a href="/hogwarts/<%= student.id %>">Delete</a>
+  </p>
 <hr/>
 </div>
 <% end %>
 
 
 <p>Past Destinations</p>
-<% for student in @students %>
-<div class="students">
-  <p>Name: <%= student.first_name() %> <%= student.last_name() %></p>
-  <p>Age: <%= student.age() %> </p>
-  <p><a href="/hogwarts/<%= student.id %>">Show Student</a></p>
+<% for country in @countries
+if country.visited == "yes"%>
+<div class="countries">
+  <p>Name: <%= country.name() %> </p>
+  <p>Date: <%= country.date() %> </p>
+  <p>Duration: <%= country.duration() %> </p>
+  <p>
+    <a href="/hogwarts/<%= student.id %>">Details</a>
+    <a href="/hogwarts/<%= student.id %>">Edit</a>
+    <a href="/hogwarts/<%= student.id %>">Delete</a>
+  </p>
 <hr/>
 </div>
 <% end %>
