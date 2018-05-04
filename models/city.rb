@@ -1,11 +1,11 @@
 require_relative('../db/sql_runner')
 
-class Country
+class City
   attr_reader :id
-  attr_accessor :name, :arrival_date, :duration
+  attr_accessor :name, :interest, :country_id
     def initialize(options)
       @id = options["id"].to_i if options["id"]
       @name = options["name"]
-      @arrival_date = options["arrival_date"]
-      @duration = options["duration"].to_i
-end
+      @interest = options["interest"]
+      @country_id = options["country_id"].to_i
+    end
