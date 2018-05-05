@@ -33,3 +33,5 @@ class City
       result = cities_array.map { |cities_hash| City.new( cities_hash ) }
       return result
     end
+    
+  end
