@@ -36,6 +36,23 @@ adventure4 = Adventure.new({
 
   adventure4.save()
 
+
+
+  adventure5 = Adventure.new({
+    "country" => "Kazakhstan",
+    "continent" => "Asia"
+    })
+
+    adventure5.save()
+
+
+  adventure6 = Adventure.new({
+      "country" => "Philippines",
+      "continent" => "Asia"
+      })
+    adventure6.save()
+
+
 city1 = City.new({
   "name" => "Lund",
   "interest" => "Botanical Garden",
@@ -100,11 +117,27 @@ city8 = City.new({
 
   city8.save()
 
+  city9 = City.new({
+    "name" => "Manila",
+    "interest" => "Ocean Park",
+    "adventure_id" => adventure5.id()
+    })
+
+    city9.save()
+
+  city10 = City.new({
+    "name" => "Vigan",
+    "interest" => "Shopping Mall",
+    "adventure_id" => adventure5.id()
+    })
+
+    city10.save()
+
+
 visit1 = Visit.new({
   "arrival_date" => "02/08/2014",
   "duration" => 5,
-  "adventure_id" => adventure1.id(),
-  "city_id" => city7.id()
+  "adventure_id" => adventure1.id()
 
   })
 
@@ -113,8 +146,7 @@ visit1.save()
   visit2 = Visit.new({
     "arrival_date" => "01/06/2012",
     "duration" => 12,
-    "adventure_id" => adventure3.id(),
-    "city_id" => city3.id()
+    "adventure_id" => adventure3.id()
     })
 
   visit2.save()

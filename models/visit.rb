@@ -2,21 +2,22 @@ require_relative('../db/sql_runner')
 
 class Visit
   attr_reader :id, :adventure_id
-  attr_accessor :arrival_date, :duration
+  attr_accessor :arrival_date, :duration, :review
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @arrival_date = options["arrival_date"]
     @duration = options["duration"].to_i
     @adventure_id = options["adventure_id"].to_i
+    @review = options["review"]
   end
 
   def save()
     sql = "INSERT INTO visits
-    (arrival_date, duration, adventure_id)
+    (arrival_date, duration, adventure_id, review)
     VALUES
-    ($1, $2, $3)
+    ($1, $2, $3, $4)
     RETURNING id"
-    values = [@arrival_date, @duration, @adventure_id]
+    values = [@arrival_date, @duration, @adventure_id, @review]
     visit = SqlRunner.run(sql, values)
     @id = visit.first()["id"].to_i
   end
@@ -35,9 +36,9 @@ class Visit
   def update()
     sql = "UPDATE visits SET
     (arrival_date, duration) =
-    ($1, $2)
-    WHERE id = $3"
-    values = [@arrival_date, @duration, @id]
+    ($1, $2, $3)
+    WHERE id = $4"
+    values = [@arrival_date, @duration, @review, @id]
     SqlRunner.run(sql, values)
   end
 

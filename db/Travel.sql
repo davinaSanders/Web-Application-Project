@@ -21,5 +21,6 @@ CREATE TABLE visits(
   id SERIAL4 PRIMARY KEY,
   arrival_date VARCHAR(255),
   duration INT2,
-  adventure_id INT2 REFERENCES adventures(id) ON DELETE CASCADE
+  adventure_id INT2 REFERENCES adventures(id) ON DELETE CASCADE,
+  review VARCHAR(800)
 );

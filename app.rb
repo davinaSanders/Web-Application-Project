@@ -31,8 +31,19 @@ get "/main/:id/details" do
   erb(:details)
 end
 
-get "/main/:id/visited" do
+get "/main/:id/details/goals" do
+  erb(:goals)
+end
+
+get "/main/:id/details/visited" do
+  @adventure = Adventure.find(params[:id].to_i)
   erb(:visited)
+end
+
+post '/main/:id/delete' do
+  @adventure = Adventure.find(params[:id].to_i)
+  @adventure.delete()
+  redirect to("/main")
 end
 
 post "/main" do
@@ -45,5 +56,11 @@ post "/main/:id/details" do
   # @order = PizzaOrder.new(params)
   # @order.update()
   # redirect "/pizza_orders"
+  erb(:details)
+end
+
+post "/main/:id/details" do
+  @adventure = Adventure.new(params)
+  @adventure.save()
   erb(:details)
 end

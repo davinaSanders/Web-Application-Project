@@ -1,8 +1,8 @@
-<form method="POST" action="/welcome/main">
+<form method="POST" action="/main/:id/details">
   <div class="form">
     <input type="date" name="arrival_date">
     <input type="text" name="duration">
-    <input type=""> take the id from the adventure
+    <input type="text" name="adventure_id" value="<%=@adventure.id%>">
     <input type="submit" value="Enter">
   </div>
 </form>
