@@ -1,0 +1,10 @@
+<p>Adventure</p>
+<p> Country: <%= @adventure.country() %> </p>
+<p> Continent: <%= @adventure.continent()  %> </p>
+
+
+<p>Cities</p>
+<% for city in @cities %>
+<p>Name: <%= city.name() %> </p>
+<p>Interest: <%= city.interest() %> </p>
+<% end  %>

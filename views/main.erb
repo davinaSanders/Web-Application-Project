@@ -1,34 +1,32 @@
-<h1><%= @visitor %></h1>
+<h4><%= @visitor %>'s Adventures</h4>
 
-<!-- <p>Future Destinations</p>
-<% for country in @countries
-if country.visited() == "no" %>
-<div class="countries">
-  <p>Name: <%= country.name() %> </p>
-  <p>Date: <%= country.date() %> </p>
-  <p>Duration: <%= country.duration() %> </p>
-  <p>
-    <a href="/hogwarts/<%= student.id %>">Details</a>
-    <a href="/hogwarts/<%= student.id %>">Edit</a>
-    <a href="/hogwarts/<%= student.id %>">Delete</a>
-  </p>
-<hr/>
+
+<% for adventure in @adventures%>
+<div class="row">
+  <div class="adventures column">
+    <h4>Visited</h4>
+    <% if @visited.include?(adventure)%>
+    <p>Country: <%= adventure.country() %> </p>
+    <p>Continent: <%= adventure.continent() %> </p>
+    <p>
+      <a href="/main/<%= adventure.id %>/details">Details</a>
+      <a href="/main/<%= adventure.id %>/edit">Edit</a>
+    </p>
+    <hr/>
+  </div>
+
+  <h4>Planned</h4>
+  <div class="adventures column">
+    <%else %>
+    <p>Country: <%= adventure.country() %> </p>
+    <p>Continent: <%= adventure.continent() %> </p>
+    <p>
+      <a href="/main/<%= adventure.id/details %>">Details</a>
+      <a href="/main/<%= adventure.id/edit %>">Edit</a>
+      <a href="/main/<%= adventure.id %>/visited">Add visit</a>
+    </p>
+    <hr/>
+    <% end %>
+  </div>
 </div>
 <% end %>
-
-
-<p>Past Destinations</p>
-<% for country in @countries
-if country.visited == "yes"%>
-<div class="countries">
-  <p>Name: <%= country.name() %> </p>
-  <p>Date: <%= country.date() %> </p>
-  <p>Duration: <%= country.duration() %> </p>
-  <p>
-    <a href="/hogwarts/<%= student.id %>">Details</a>
-    <a href="/hogwarts/<%= student.id %>">Edit</a>
-    <a href="/hogwarts/<%= student.id %>">Delete</a>
-  </p>
-<hr/>
-</div>
-<% end %> -->
