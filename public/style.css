@@ -19,3 +19,36 @@ body {
 h3 {
   text-decoration: underline;
 }
+
+a:visited {
+color: HotPink;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:link{
+  color: Salmon;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+color: Pink;
+background-color: transparent;
+text-decoration: none;
+}
+
+nav {
+  text-align: center;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: Black;
+  color: Silver;
+  border: 0.1em outset #C0C0C0;
+  padding: 0.1em 0.3em;
+  text-decoration: none;
+  margin: 0.2em 0.4em;
+  cursor: pointer;
+  font-size: 0.6em;
+}
