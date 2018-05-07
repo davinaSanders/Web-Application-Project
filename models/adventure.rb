@@ -63,6 +63,14 @@ class Adventure
       return result
     end
 
+    def self.not_visited
+      sql = "SELECT adventures.* FROM adventures
+      LEFT JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id IS NULL"
+      adventures_array = SqlRunner.run( sql )
+      result = adventures_array.map { |adventures_hash| Adventure.new( adventures_hash ) }
+      return result
+    end
+
     def self.find( id )
       sql = "SELECT * FROM adventures
       WHERE id = $1"

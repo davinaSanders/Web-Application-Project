@@ -137,7 +137,8 @@ city8 = City.new({
 visit1 = Visit.new({
   "arrival_date" => "02/08/2014",
   "duration" => 5,
-  "adventure_id" => adventure1.id()
+  "adventure_id" => adventure1.id(),
+  "review" => "I didn't like it"
 
   })
 
@@ -146,7 +147,8 @@ visit1.save()
   visit2 = Visit.new({
     "arrival_date" => "01/06/2012",
     "duration" => 12,
-    "adventure_id" => adventure3.id()
+    "adventure_id" => adventure3.id(),
+    "review" => "I loved it"
     })
 
   visit2.save()

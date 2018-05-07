@@ -1,11 +1,21 @@
 body {
-  background-color: Silver;
+  background-color: Aquamarine;
   font-family: 'Handlee', cursive;
   margin: 10em;
   font-size: 1.5em;
 }
 
 .column {
-  float: left;
   width: 50%;
+}
+
+.visited {
+  float: left;
+}
+.not_visited {
+  float: right;
+}
+
+h3 {
+  text-decoration: underline;
 }

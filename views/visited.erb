@@ -1,8 +1,12 @@
-<form method="POST" action="/main/:id/details/visited">
+<form method="POST" action="/main/:id/visited">
   <div class="form">
     <input type="date" name="arrival_date">
-    <input type="text" placeholder="how many days" name="duration">
-    <input type="text" name="adventure_id" value="<%=@adventure.id%>">
+    <input type="number" name="duration">
+    <input type="text" name="adventure_id" value="<%@adventure.id%>">
+    <fieldset>
+      <legend>Reviews</legend>
+      <input type="text" name="review">
+    </fieldset>
     <input type="submit" value="Enter">
   </div>
 </form>
