@@ -1,0 +1,6 @@
+require( "sinatra" )
+require( "sinatra/contrib/all" )
+require( "pry" )
+require_relative( "./models/city.rb" )
+require_relative( "./models/adventure.rb" )
+require_relative( "./models/visit.rb" )
