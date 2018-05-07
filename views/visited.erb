@@ -1,8 +1,8 @@
-<form method="POST" action="/main/:id/visited">
+<form method="POST" action="/main/<%=@adventure.id%>/visited">
   <div class="form">
     <input type="date" name="arrival_date">
     <input type="number" name="duration">
-    <input type="text" name="adventure_id" value="<%@adventure.id%>">
+    <input type="text" name="adventure_id" value="<%=@adventure.id%>">
     <fieldset>
       <legend>Reviews</legend>
       <input type="text" name="review">

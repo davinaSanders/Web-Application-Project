@@ -6,6 +6,7 @@ require_relative( "../models/adventure.rb" )
 require_relative( "../models/visit.rb" )
 
 get "/reviews" do
+  @reviews = Visit.
   erb(:reviews)
 end
 
@@ -15,7 +16,7 @@ get "/main/:id/visited" do
   erb(:visited)
 end
 
-post "/main/:id" do
+post "/main/:id/visited" do
   @visit = Visit.new(params)
   @visit.save()
   erb(:details)
