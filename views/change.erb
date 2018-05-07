@@ -1,0 +1,7 @@
+<p>Edit your city below</p>
+<form method="POST" action="/main/city/<%=@city.id%>/change">
+  <input type="text" name="name" placeholder="<%=  @city.name%>">
+  <input type="text" name="interest" placeholder="<%=  @city.interest%>">
+  <input type="text" name="adventure_id" value="<%=@city.adventure_id%>">
+  <input type="submit" value="Update">
+</form>

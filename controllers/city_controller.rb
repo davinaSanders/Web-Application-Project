@@ -12,8 +12,25 @@ get "/main/:id/details/goals" do
   erb(:goals)
 end
 
+get "/main/city/:id/change" do
+  @city = City.find(params[:id].to_i)
+  erb(:change)
+end
+
+post "/main/city/:id/change" do
+  @city = City.new(params)
+  @city.update()
+  redirect to ("/main")
+end
+
+post "/main/city/:id/delete" do
+  @city = City.find(params[:id].to_i)
+  @city.delete()
+  redirect to ("/main")
+end
+
 post "/main/:id/details/goals" do
   @city = City.new(params)
   @city.save()
-  redirect to ("/main/:id/details")
+  redirect to ("/main")
 end

@@ -7,6 +7,10 @@
 <% for city in @cities %>
 <p>Name: <%= city.name() %> </p>
 <p>Interest: <%= city.interest() %> </p>
+<a href="/main/city/<%= city.id %>/change">Edit</a>
+<form action="/main/city/<%= city.id %>/delete" method="POST">
+  <input class="button" type="submit" value="Delete" />
+</form>
 <hr>
 <% end  %>
 

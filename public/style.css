@@ -1,8 +1,25 @@
 body {
   background-color: Aquamarine;
   font-family: 'Handlee', cursive;
-  margin: 10em;
+  margin: 8em;
   font-size: 1.5em;
+}
+
+nav {
+  font-size: 1.4em;
+
+}
+
+nav, a {
+  margin: 0.6em;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  z-index: 7;
+
 }
 
 .column {
@@ -16,6 +33,10 @@ body {
   float: right;
 }
 
+h2 {
+  font-size: 3em;
+}
+
 h3 {
   text-decoration: underline;
 }
@@ -27,13 +48,13 @@ text-decoration: none;
 }
 
 a:link{
-  color: Salmon;
+  color: #d580ff;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
-color: Pink;
+color: Indigo;
 background-color: transparent;
 text-decoration: none;
 }
