@@ -26,7 +26,7 @@ post "/new" do
   redirect to("/main")
 end
 
-post "/main/:id" do
+post "/main/:id/update" do
   @adventure = Adventure.new(params)
   @adventure.update()
   redirect to("/main")

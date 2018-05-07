@@ -38,10 +38,6 @@ background-color: transparent;
 text-decoration: none;
 }
 
-nav {
-  text-align: center;
-}
-
 input[type=submit], input[type=reset] {
   background-color: Black;
   color: Silver;

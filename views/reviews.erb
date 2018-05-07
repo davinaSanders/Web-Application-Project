@@ -1,1 +1,7 @@
 <p>Reviews</p>
+
+<%for review in @reviews%>
+<p> Date: <%= review["arrival_date"]%></p>
+<p>Review: <%= review["review"]%> </p>
+<hr>
+<%end  %>

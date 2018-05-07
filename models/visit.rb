@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require("pry")
 
 class Visit
   attr_reader :id, :adventure_id
@@ -40,6 +41,12 @@ class Visit
     WHERE id = $4"
     values = [@arrival_date, @duration, @review, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def self.reviews()
+    sql = "SELECT visits.review, visits.arrival_date FROM visits"
+    reviews_array = SqlRunner.run( sql )
+    return reviews_array
   end
 
   def self.all()
