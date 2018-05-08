@@ -153,5 +153,25 @@ visit1.save()
 
   visit2.save()
 
+  visit3 = Visit.new({
+    "arrival_date" => "11/08/2015",
+    "duration" => 6,
+    "adventure_id" => adventure2.id(),
+    "review" => "Not the worst"
+
+    })
+
+  visit3.save()
+
+  visit4 = Visit.new({
+    "arrival_date" => "20/07/2012",
+    "duration" => 2,
+    "adventure_id" => adventure4.id(),
+    "review" => "Wouldn't recommend"
+
+    })
+
+  visit4.save()
+
   binding.pry
 nil

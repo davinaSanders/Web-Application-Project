@@ -88,13 +88,6 @@ class Adventure
       return cities
     end
 
-    def visits()
-      sql = "SELECT visits.* FROM visits WHERE visits.adventure_id = $1"
-      values = [@id]
-      visit_hashes = SqlRunner.run(sql, values)
-      visits = visit_hashes.map { |visit_hash| Visit.new(visit_hash)}
-      return visits
-    end
 
     def continents()
       sql = "SELECT adventures.* FROM adventures WHERE adventures.continent = $1"
@@ -102,15 +95,15 @@ class Adventure
       country_hashes = SqlRunner.run(sql, values)
       countries = country_hashes.map { |country_hash| Adventure.new(country_hash)}
       return countries
-
     end
 
     def countries()
-      sql = "SELECT adventures.country FROM adventures INNER JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id = $1"
+      sql = "SELECT adventures.* FROM adventures INNER JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id = $1"
       values = [@id]
       country_hashes = SqlRunner.run(sql, values)
-      countries = country_hashes.map { |country_hash| Country.new(country_hash)}
+      countries = country_hashes.map { |country_hash| Adventure.new(country_hash)}
       return countries
     end
+
 
   end

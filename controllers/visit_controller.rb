@@ -6,7 +6,8 @@ require_relative( "../models/adventure.rb" )
 require_relative( "../models/visit.rb" )
 
 get "/reviews" do
-  @reviews = Visit.reviews()
+  # @reviews = Visit.reviews()
+  @visits = Visit.all()
   erb(:reviews)
 end
 

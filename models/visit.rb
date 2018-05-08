@@ -57,4 +57,13 @@ class Visit
   end
 
 
+  def visits()
+    sql = "SELECT visits.* FROM visits WHERE visits.adventure_id = $1"
+    values = [@id]
+    visit_hashes = SqlRunner.run(sql, values)
+    visits = visit_hashes.map { |visit_hash| Visit.new(visit_hash)}
+    return visits
+  end
+
+
   end
