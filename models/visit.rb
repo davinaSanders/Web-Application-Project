@@ -65,5 +65,13 @@ class Visit
     return visits
   end
 
+  def adventure()
+    sql = "SELECT * FROM adventures WHERE id = $1"
+    values = [@adventure_id]
+    results = SqlRunner.run(sql, values)
+    adventure = Adventure.new(results.first)
+    return adventure
+  end
+
 
   end

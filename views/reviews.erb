@@ -1,8 +1,8 @@
-<p>Reviews</p>
+<p class="title">Reviews</p>
 
 <%for visit in @visits%>
 <p> Date: <%= visit.arrival_date()%></p>
-<p> Country: <% number = visit.adventure_id()%> <%=  %> </p>
+<p> Country: <%= visit.adventure().country()%></p>
 <p> Review: <%= visit.review()%> </p>
 <hr>
 <%end  %>
