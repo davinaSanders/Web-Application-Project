@@ -20,6 +20,18 @@ get "/main/:id/details" do
   erb(:details)
 end
 
+get "/search" do
+  erb(:search)
+end
+
+get "/search/results" do
+  erb(:results)
+end
+
+post "search/results" do
+  erb(:results)
+end
+
 post "/new" do
   @adventure = Adventure.new(params)
   @adventure.save()
