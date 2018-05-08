@@ -106,7 +106,7 @@ class Adventure
     end
 
     def countries()
-      sql = "SELECT adventures.name FROM adventures INNER JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id = $1"
+      sql = "SELECT adventures.country FROM adventures INNER JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id = $1"
       values = [@id]
       country_hashes = SqlRunner.run(sql, values)
       countries = country_hashes.map { |country_hash| Country.new(country_hash)}
