@@ -1,5 +1,10 @@
+
+<% if @adventures != nil %>
 <% for adventure in @adventures %>
 <p>Country: <%= adventure.country() %> </p>
 <p>Continent: <%= adventure.continent() %> </p>
 <hr>
+<% end %>
+<%else  %>
+<p>You have no planned visits to <%= @continent %></p>
 <% end %>

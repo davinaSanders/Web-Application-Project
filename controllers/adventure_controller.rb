@@ -26,9 +26,14 @@ end
 
 post "/search/results" do
   @adventure = Adventure.find_by_continent(params["continent"])
-  binding.pry
-  @adventures = @adventure.continents()
-  erb(:results)
+  if @adventure != nil
+    @adventures = @adventure.continents()
+    erb(:results)
+  else
+    @adventures = nil
+    @continent = params["continent"]
+    erb(:results)
+  end
 end
 
 post "/new" do

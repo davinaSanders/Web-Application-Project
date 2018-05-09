@@ -73,3 +73,6 @@ input[type=submit], input[type=reset] {
 .title  {
   text-decoration: underline;
 }
+.hide {
+  display: none;
+}

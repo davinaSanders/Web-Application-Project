@@ -85,8 +85,11 @@ class Adventure
     WHERE continent = $1"
     values = [continent]
     adventure = SqlRunner.run( sql, values )
-    result = Adventure.new( adventure.first )
-    return result
+    if adventure.ntuples != 0
+      return Adventure.new( adventure.first )
+    else
+      return nil
+    end
   end
 
   def cities()
