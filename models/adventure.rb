@@ -119,5 +119,5 @@ class Adventure
     return countries
   end
 
-
+  
 end

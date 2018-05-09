@@ -9,6 +9,16 @@ nav {
   font-size: 1.4em;
 }
 
+input {
+  font-size: 1em;
+}
+
+.continent_select {
+  font-size: 1em;
+}
+
+
+
 nav, a {
   margin: 0.6em;
 }
@@ -77,8 +87,8 @@ input[type=submit], input[type=reset] {
 
 .title  {
   text-decoration: underline;
-  font-weight: bolder;
-  text-shadow: 0.03em 0.04em white;
+  font-weight: 800;
+  text-shadow: 0.02em 0.02em white;
   font-size: 1em;
 
 }
