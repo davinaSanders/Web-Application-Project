@@ -24,11 +24,10 @@ get "/search" do
   erb(:search)
 end
 
-get "/search/results" do
-  erb(:results)
-end
-
-post "search/results" do
+post "/search/results" do
+  @adventure = Adventure.find_by_continent(params["continent"])
+  binding.pry
+  @adventures = @adventure.continents()
   erb(:results)
 end
 

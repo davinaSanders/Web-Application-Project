@@ -2,20 +2,20 @@
 
 <div class="row">
   <div class="visited column">
-   <h3>Visited</h3>
-   <% for adventure in @visited %>
-   <p>Country: <%= adventure.country() %> </p>
-   <p>Continent: <%= adventure.continent() %> </p>
-   <p>
-     <a href="/main/<%= adventure.id %>/details">Details</a>
-     <a href="/main/<%= adventure.id %>/edit">Edit</a>
-     <form action="/main/<%= adventure.id %>/delete" method="POST">
-       <input class="button" type="submit" value="Delete" />
-     </form>
-   </p>
-   <% end %>
- </div>
- <div class="not_visited column">
+    <h3>Visited</h3>
+    <% for adventure in @visited %>
+    <p>Country: <%= adventure.country() %> </p>
+    <p>Continent: <%= adventure.continent() %> </p>
+    <p>
+      <a href="/main/<%= adventure.id %>/details">Details</a>
+      <a href="/main/<%= adventure.id %>/edit">Edit</a>
+      <form action="/main/<%= adventure.id %>/delete" method="POST">
+        <input class="button" type="submit" value="Delete" />
+      </form>
+    </p>
+    <% end %>
+  </div>
+  <div class="not_visited column">
     <h3>Planned</h3>
     <% for adventure in @not_visited %>
     <p>Country: <%= adventure.country() %> </p>

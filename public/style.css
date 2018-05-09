@@ -42,9 +42,9 @@ h3 {
 }
 
 a:visited {
-color: HotPink;
-background-color: transparent;
-text-decoration: none;
+  color: HotPink;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 a:link{
@@ -54,9 +54,9 @@ a:link{
 }
 
 a:hover {
-color: Indigo;
-background-color: transparent;
-text-decoration: none;
+  color: Indigo;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 input[type=submit], input[type=reset] {

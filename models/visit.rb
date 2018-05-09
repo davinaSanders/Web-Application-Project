@@ -74,4 +74,4 @@ class Visit
   end
 
 
-  end
+end
