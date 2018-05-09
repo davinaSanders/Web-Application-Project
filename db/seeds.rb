@@ -52,6 +52,17 @@ adventure1 = Adventure.new({
             })
             adventure6.save()
 
+            adventure7 = Adventure.new({
+              "country" => "Canada",
+              "continent" => "North America"
+              })
+              adventure7.save()
+
+              adventure8 = Adventure.new({
+                "country" => "Venezuela",
+                "continent" => "South America"
+                })
+                adventure8.save()
 
             city1 = City.new({
               "name" => "Lund",
@@ -132,6 +143,42 @@ adventure1 = Adventure.new({
                                 })
 
                                 city10.save()
+
+          city11 = City.new({
+            "name" => "Montreal",
+            "interest" => "Old Building",
+            "adventure_id" => adventure7.id()
+
+            })
+
+            city11.save()
+
+            city12 = City.new({
+              "name" => "Calgary",
+              "interest" => "More buildings",
+              "adventure_id" => adventure7.id()
+
+              })
+
+              city12.save()
+
+              city13 = City.new({
+                "name" => "Maracay",
+                "interest" => "Monument",
+                "adventure_id" => adventure8.id()
+
+                })
+
+
+          city13.save()
+
+                city14 = City.new({
+                "name" => "Cumana",
+                "interest" => "Nature reserve",
+                "adventure_id" => adventure8.id()})
+
+                city14.save()
+
 
 
                                 visit1 = Visit.new({
