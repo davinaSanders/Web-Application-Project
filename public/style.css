@@ -1,5 +1,5 @@
 body {
-  background-color: Aquamarine;
+  background-image: radial-gradient(circle, #59839e, #6488ad, #738dba, #8791c5, #9e93cd);
   font-family: 'Handlee', cursive;
   margin: 8em;
   font-size: 1.5em;
@@ -7,11 +7,14 @@ body {
 
 nav {
   font-size: 1.4em;
-
 }
 
 nav, a {
   margin: 0.6em;
+}
+
+a {
+  text-shadow: 0.04em 0.04em black;
 }
 
 .logo {
@@ -35,6 +38,7 @@ nav, a {
 
 h2 {
   font-size: 3em;
+  text-shadow: 0.03em 0.04em silver;
 }
 
 h3 {
@@ -42,19 +46,18 @@ h3 {
 }
 
 a:visited {
-  color: HotPink;
+  color: #2F3DC3;
   background-color: transparent;
-  text-decoration: none;
 }
 
 a:link{
-  color: #d580ff;
+  color: ;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
-  color: Indigo;
+  color: #9E93CD;
   background-color: transparent;
   text-decoration: none;
 }
@@ -68,11 +71,25 @@ input[type=submit], input[type=reset] {
   margin: 0.2em 0.4em;
   cursor: pointer;
   font-size: 0.6em;
+  font: #9E93CD;
+  border-radius: 15%;
 }
 
 .title  {
   text-decoration: underline;
+  font-weight: bolder;
+  text-shadow: 0.03em 0.04em white;
+  font-size: 1em;
+
 }
 .hide {
   display: none;
+}
+
+.total {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.button {
+  border-radius: 15%;
 }

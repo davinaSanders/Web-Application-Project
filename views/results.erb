@@ -1,10 +1,10 @@
-
-<% if @adventures != nil %>
+<p class="title">Continents</p>
+<%if @adventures.length == 0 %>
+<p>You have no planned visits to <%= @continent %></p>
+<% end %>
 <% for adventure in @adventures %>
 <p>Country: <%= adventure.country() %> </p>
 <p>Continent: <%= adventure.continent() %> </p>
 <hr>
 <% end %>
-<%else  %>
-<p>You have no planned visits to <%= @continent %></p>
-<% end %>
+<p class="total" >Total visits: <%=@adventures.length() %></p>

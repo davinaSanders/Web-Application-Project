@@ -80,17 +80,17 @@ class Adventure
     return result
   end
 
-  def self.find_by_continent( continent )
-    sql = "SELECT * FROM adventures
-    WHERE continent = $1"
-    values = [continent]
-    adventure = SqlRunner.run( sql, values )
-    if adventure.ntuples != 0
-      return Adventure.new( adventure.first )
-    else
-      return nil
-    end
-  end
+  # def self.find_by_continent( continent )
+  #   sql = "SELECT * FROM adventures
+  #   WHERE continent = $1"
+  #   values = [continent]
+  #   adventure = SqlRunner.run( sql, values )
+  #   if adventure.ntuples != 0
+  #     return Adventure.new( adventure.first )
+  #   else
+  #     return nil
+  #   end
+  # end
 
   def cities()
     sql = "SELECT cities.* FROM cities WHERE cities.adventure_id = $1"
@@ -101,14 +101,23 @@ class Adventure
   end
 
 
-  def continents()
-    sql = "SELECT * FROM adventures WHERE continent = $1"
-    values = [@continent]
+  # def continents()
+  #   sql = "SELECT * FROM adventures WHERE continent = $1"
+  #   values = [@continent]
+  #   country_hashes = SqlRunner.run(sql, values)
+  #   countries = country_hashes.map { |country_hash| Adventure.new(country_hash)}
+  #   return countries
+  # end
+
+
+  def self.countries_by_continent(continent)
+    sql = "SELECT * FROM adventures
+    WHERE continent = $1"
+    values = [continent]
     country_hashes = SqlRunner.run(sql, values)
     countries = country_hashes.map { |country_hash| Adventure.new(country_hash)}
     return countries
   end
-
 
 
 end

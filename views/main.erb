@@ -14,6 +14,7 @@
       </form>
     </p>
     <% end %>
+    <p class="total">Total visits: <%=@visited.length() %></p>
   </div>
   <div class="not_visited column">
     <h3>Planned</h3>
@@ -29,5 +30,6 @@
       </form>
     </p>
     <% end %>
+    <p class="total">Total planned: <%=@not_visited.length() %></p>
   </div>
 </div>
