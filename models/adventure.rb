@@ -63,13 +63,6 @@ class Adventure
     return result
   end
 
-  def self.not_visited
-    sql = "SELECT adventures.* FROM adventures
-    LEFT JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id IS NULL"
-    adventures_array = SqlRunner.run( sql )
-    result = adventures_array.map { |adventures_hash| Adventure.new( adventures_hash ) }
-    return result
-  end
 
   def self.find( id )
     sql = "SELECT * FROM adventures
@@ -77,6 +70,22 @@ class Adventure
     values = [id]
     adventure = SqlRunner.run( sql, values )
     result = Adventure.new( adventure.first )
+    return result
+  end
+
+  def cities()
+    sql = "SELECT cities.* FROM cities WHERE cities.adventure_id = $1"
+    values = [@id]
+    city_hashes = SqlRunner.run(sql, values)
+    cities = city_hashes.map { |city_hash| City.new(city_hash)}
+    return cities
+  end
+
+  def self.not_visited
+    sql = "SELECT adventures.* FROM adventures
+    LEFT JOIN visits ON adventures.id = visits.adventure_id WHERE visits.adventure_id IS NULL"
+    adventures_array = SqlRunner.run( sql )
+    result = adventures_array.map { |adventures_hash| Adventure.new( adventures_hash ) }
     return result
   end
 
@@ -91,14 +100,6 @@ class Adventure
   #     return nil
   #   end
   # end
-
-  def cities()
-    sql = "SELECT cities.* FROM cities WHERE cities.adventure_id = $1"
-    values = [@id]
-    city_hashes = SqlRunner.run(sql, values)
-    cities = city_hashes.map { |city_hash| City.new(city_hash)}
-    return cities
-  end
 
 
   # def continents()
@@ -119,5 +120,5 @@ class Adventure
     return countries
   end
 
-  
+
 end

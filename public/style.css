@@ -7,6 +7,7 @@ body {
 
 nav {
   font-size: 1.4em;
+  color: #333333;
 }
 
 input {
@@ -20,11 +21,15 @@ input {
 
 
 nav, a {
-  margin: 0.6em;
+  margin: 1.2em;
+  color: #333333;
+
 }
 
 a {
+  color: #333333;
   text-shadow: 0.04em 0.04em black;
+  text-align: right;
 }
 
 .logo {
@@ -56,12 +61,11 @@ h3 {
 }
 
 a:visited {
-  color: #2F3DC3;
+  /* color: #2F3DC3; */
   background-color: transparent;
 }
 
 a:link{
-  color: ;
   background-color: transparent;
   text-decoration: none;
 }
