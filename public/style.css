@@ -14,12 +14,6 @@ input {
   font-size: 1em;
 }
 
-.continent_select {
-  font-size: 1em;
-}
-
-
-
 nav, a {
   margin: 1.2em;
   color: #333333;
@@ -32,25 +26,6 @@ a {
   text-align: right;
 }
 
-.logo {
-  position: fixed;
-  top: 20px;
-  right: 45px;
-  z-index: 7;
-
-}
-
-.column {
-  width: 50%;
-}
-
-.visited {
-  float: left;
-}
-.not_visited {
-  float: right;
-}
-
 h2 {
   font-size: 3em;
   text-shadow: 0.03em 0.04em silver;
@@ -61,7 +36,6 @@ h3 {
 }
 
 a:visited {
-  /* color: #2F3DC3; */
   background-color: transparent;
 }
 
@@ -87,6 +61,29 @@ input[type=submit], input[type=reset] {
   font-size: 0.6em;
   font: #9E93CD;
   border-radius: 15%;
+}
+
+.continent_select {
+  font-size: 1em;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  right: 45px;
+  z-index: 7;
+
+}
+
+.column {
+  width: 50%;
+}
+
+.visited {
+  float: left;
+}
+.not_visited {
+  float: right;
 }
 
 .title  {
