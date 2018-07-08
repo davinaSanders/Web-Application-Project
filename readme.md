@@ -15,3 +15,4 @@ UX Considerations:
   * The use of "goals" as opposed to cities to help focus the user. 
   * The use of "Adventures" used to motivate the user. 
 * Fonts were limited to two types: Sans-serif used for short phrases and serif used for longer text.
+* Minimalistic style achieved by using placeholders to save on real estate 
