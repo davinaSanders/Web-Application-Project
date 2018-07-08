@@ -1,4 +1,4 @@
-This Travel App demonstrates:
+This Travel Application demonstrates:
 * familiarity with **HTML syntax** and various **CSS selectors** 
 * use of **embedded ruby** to interact with the front end
 * use of **prepared statements** in a helper file to safeguard from SQL injections
