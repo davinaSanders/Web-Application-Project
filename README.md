@@ -16,3 +16,6 @@ UX Considerations:
   * The use of "Adventures" used to motivate the user. 
 * Fonts were limited to two types: Sans-serif used for short phrases and serif used for longer text.
 * Minimalistic style achieved by using placeholders to save on real estate 
+
+
+This project is currently under development and re-factor - September 2018
